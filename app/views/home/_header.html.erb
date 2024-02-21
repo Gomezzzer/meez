@@ -8,17 +8,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
-       
-        
-        
-
-
-        <% if user_signed_in? %>
+        <% if user_signed_in? %> 
             <li class="nav-item">
-              <%= link_to "Add Friend", new_friend_path, class:"nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Sign out",  destroy_user_session_path, method: :delete, class:"nav-link" %>
+              <%= button_to "Sign out",  destroy_user_session_path, method: :delete, class:"nav-link" %>
             </li>
 
             <li class="nav-item">
@@ -33,9 +25,7 @@
               <%= link_to "Sign In",  new_user_session_path, class:"nav-link" %>
             </li>
         <% end %>  
-
-       
-        
+  
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
