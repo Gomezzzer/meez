@@ -4,10 +4,9 @@
 
 <div>
   <%= link_to "Edit this recipe modifier", edit_recipe_modifier_path(@recipe_modifier) %> |
-  <%= link_to "Back to recipe modifiers", recipe_modifiers_path %>
+  <%= link_to "Back to recipe modifiers", recipe_modifiers_path %> 
 
   
- <%= link_to "Adjust this recipe", adjust_yield_recipe_modifier_path(@recipe_modifier) %>
 
   <%= button_to "Destroy this recipe modifier", @recipe_modifier, method: :delete %>
 </div>

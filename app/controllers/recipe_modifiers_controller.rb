@@ -8,7 +8,7 @@ class RecipeModifiersController < ApplicationController
 
   # GET /recipe_modifiers/1 or /recipe_modifiers/1.json
   def show
-    @recipe_modifier = RecipeModifier.find(params[:id])
+  #  @recipe_modifier = RecipeModifier.find(params[:id])
   end
   
 
@@ -21,15 +21,8 @@ class RecipeModifiersController < ApplicationController
   def edit
   end
 
+
   
-def adjust_yield
-  @recipe_modifier = RecipeModifier.find(params[:id])
-  # Other logic as needed
-
-  render 'adjust_recipe'
-end
-
-
 
   # POST /recipe_modifiers or /recipe_modifiers.json
   def create
@@ -64,18 +57,16 @@ end
 
   # DELETE /recipe_modifiers/1 or /recipe_modifiers/1.json
   def destroy
+    @recipe_modifier = RecipeModifier.find(params[:id])
     @recipe_modifier.destroy
-
-    respond_to do |format|
-      format.html { redirect_to recipe_modifiers_url, notice: "Recipe modifier was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to recipe_modifiers_url, notice: "Recipe modifier was successfully destroyed."
   end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_recipe_modifier
-      @recipe_modifier = RecipeModifier.find(params[:id])
+   def set_recipe_modifier
+     @recipe_modifier = RecipeModifier.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
