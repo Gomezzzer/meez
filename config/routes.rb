@@ -5,4 +5,13 @@ Rails.application.routes.draw do
   root "home#index"
   # Defines the root path route ("/")
   # root "articles#index"
+  # config/routes.rb
+  resources :recipe_modifiers do
+    member do
+      get 'adjust_yield'
+    end
+  end
+  
+  
+ 
 end

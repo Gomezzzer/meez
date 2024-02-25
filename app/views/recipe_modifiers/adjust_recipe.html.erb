@@ -1,0 +1,25 @@
+<!-- app/views/recipe_modifiers/adjust_recipe.html.erb -->
+
+<h1>Adjust Recipe</h1>
+
+<div class="card-body">
+  <h5 class="card-title"><strong>Description:</strong> <%= @recipe_modifier.description %></h5>
+  <p class="card-text"><strong>Recipe:</strong> <%= @recipe_modifier.recipe %></p>
+  <p class="card-text"><strong>Measurements:</strong> <%= @recipe_modifier.measurements %></p>
+
+  <!-- Form for adjusting the yield -->
+  <%= form_tag adjust_yield_recipe_modifier_path(@recipe_modifier), method: :post, class: "mt-4" do %>
+    <!-- Adjust yield form fields -->
+    <%= label_tag :desired_yield, "Desired Yield" %>
+    <%= number_field_tag :desired_yield %>
+    <%= submit_tag "Adjust Yield", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+
+
+  <!-- Add more form fields as needed -->
+
+
+
+<%= link_to "Back", recipe_modifiers_path, class: "btn btn-secondary" %>

@@ -8,7 +8,9 @@ class RecipeModifiersController < ApplicationController
 
   # GET /recipe_modifiers/1 or /recipe_modifiers/1.json
   def show
+    @recipe_modifier = RecipeModifier.find(params[:id])
   end
+  
 
   # GET /recipe_modifiers/new
   def new
@@ -18,6 +20,16 @@ class RecipeModifiersController < ApplicationController
   # GET /recipe_modifiers/1/edit
   def edit
   end
+
+  
+def adjust_yield
+  @recipe_modifier = RecipeModifier.find(params[:id])
+  # Other logic as needed
+
+  render 'adjust_recipe'
+end
+
+
 
   # POST /recipe_modifiers or /recipe_modifiers.json
   def create
@@ -46,6 +58,9 @@ class RecipeModifiersController < ApplicationController
       end
     end
   end
+
+  
+
 
   # DELETE /recipe_modifiers/1 or /recipe_modifiers/1.json
   def destroy
