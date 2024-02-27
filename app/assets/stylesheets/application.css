@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+ .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-wrapper .shadow {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
+}
+
+.card-footer {
+  margin-top: 2rem;
+}
+
+

@@ -8,7 +8,7 @@ class RecipeModifiersController < ApplicationController
 
   # GET /recipe_modifiers/1 or /recipe_modifiers/1.json
   def show
-  #  @recipe_modifier = RecipeModifier.find(params[:id])
+    @recipe_modifier = RecipeModifier.find(params[:id])
   end
   
 
