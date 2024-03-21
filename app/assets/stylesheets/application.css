@@ -13,21 +13,33 @@
  *= require_tree .
  *= require_self
  */
- .card-wrapper {
+ @import url("http://fonts.googleapis.com/css?family=Oswald:400,300,700");
+
+ /* home index.hmtl.erb */
+ #home h1 {
+  font-size: 100px;
+  margin-top: 2rem;
+  font-family: 'Oswald', sans-serif !important;
+}
+
+/* recipe_mod */
+#recipe_mod h1 {
+  margin-bottom: 2rem; 
+}
+
+ /* recipe_modifier index.html.erb */
+.card-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-
 .card-wrapper .shadow {
   flex: 1;
   margin-bottom: 20px;
 }
-
 .card-body {
   margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
 }
-
 .card-footer {
   margin-top: 2rem;
 }
