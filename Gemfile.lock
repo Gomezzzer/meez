@@ -321,6 +321,7 @@ GEM
     rspec-support (3.12.0)
     ruby-graphviz (1.2.5)
       rexml
+    ruby-units (4.0.3)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     rufo (0.16.0)
@@ -435,6 +436,7 @@ DEPENDENCIES
   redis (~> 4.0)
   rspec-html-matchers
   rspec-rails (~> 6.0.0)
+  ruby-units
   rufo
   selenium-webdriver
   specs_to_readme
