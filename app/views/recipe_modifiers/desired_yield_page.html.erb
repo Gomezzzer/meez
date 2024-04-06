@@ -1,22 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Desired Yield Page</title>
-</head>
-<body>
-  <h1>New Recipe with Adjusted Yield</h1>
-  <h2>Original Recipe</h2>
-  <ul>
-    <% @recipe_modifier.measurements.split('/').each do |measurement| %>
-      <li><%= measurement.strip %></li>
-    <% end %>
-  </ul>
-
-  <h2>Scaled Recipe (Factor: <%= @scaling_factor %>)</h2>
-  <ul>
-    <% @scaled_measurements.each do |measurement| %>
-      <li><%= measurement.strip %></li>
-    <% end %>
-  </ul>
-</body>
-</html>
+<div class="container mt-4 mb-3">
+  <h1>Recipe modifiers</h1>
+  <div class="row"> 
+    <div class="col-md-6 mb-5 d-flex">
+      <div class="card shadow flex-fill">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Original Recipe</h5>
+          <ul class="flex-fill">
+            <% @recipe_modifier.measurements.split('/').each do |measurement| %>
+              <li class="list-group-item"><%= measurement.strip %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 mb-5 d-flex">
+      <div class="card shadow flex-fill">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Scaled Recipe (Factor: <%= @scaling_factor %>)</h5>
+          <ul class="flex-fill">
+            <% @scaled_measurements.each do |measurement| %>
+              <li class="list-group-item"><%= measurement.strip %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
