@@ -88,6 +88,13 @@ class RecipeModifiersController < ApplicationController
       end
     end
   end
+
+  # DELETE /recipe_modifiers/1 or /recipe_modifiers/1.json
+  def destroy
+    @recipe_modifier = RecipeModifier.find(params[:id])
+    @recipe_modifier.destroy
+    redirect_to recipe_modifiers_url, notice: "Recipe modifier was successfully destroyed."
+  end
   
   
   private
@@ -115,12 +122,6 @@ class RecipeModifiersController < ApplicationController
   
   
 
-  # DELETE /recipe_modifiers/1 or /recipe_modifiers/1.json
-  def destroy
-    @recipe_modifier = RecipeModifier.find(params[:id])
-    @recipe_modifier.destroy
-    redirect_to recipe_modifiers_url, notice: "Recipe modifier was successfully destroyed."
-  end
   
 
   private
