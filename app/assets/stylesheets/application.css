@@ -17,7 +17,7 @@
 
  /* home index.hmtl.erb */
  #home h1 {
-  font-size: 100px;
+  font-size: 200px;
   margin-top: 2rem;
   font-family: 'Oswald', sans-serif !important;
 }
@@ -51,4 +51,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for opacity */
   z-index: 1050; /* Ensure the overlay appears above the modal */
+}
+
+.landing-page {
+  background-size: cover;
+  /* Add any additional styles you need */
 }
