@@ -53,7 +53,31 @@
   z-index: 1050; /* Ensure the overlay appears above the modal */
 }
 
-.landing-page {
-  background-size: cover;
-  /* Add any additional styles you need */
+/* Default styles */
+.image-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.img-fluid {
+  max-width: 100%; /* Set maximum width */
+  height: auto;
+  display: block;
+  width: 100%; /* Set initial width */
+}
+
+/* Media queries for different devices */
+@media (min-width: 768px) {
+  /* Tablet */
+  .img-fluid {
+    width: 97%; /* Adjust width for tablet screens */
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktop */
+  .img-fluid {
+    width: 60%; /* Adjust width for desktop screens */
+  }
 }
