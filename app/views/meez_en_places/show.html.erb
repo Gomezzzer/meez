@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @meez_en_place %>
+
+<div>
+  <%= link_to "Edit this meez en place", edit_meez_en_place_path(@meez_en_place) %> |
+  <%= link_to "Back to meez en places", meez_en_places_path %>
+
+  <%= button_to "Destroy this meez en place", @meez_en_place, method: :delete %>
+</div>

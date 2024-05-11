@@ -1,0 +1,24 @@
+<body id="meez_en_places">
+  <div class="container mt-4 mb-3">
+    <h1>Meez en place</h1>
+    <div class="row"> 
+      <% @meez_en_places.each do |meez_en_place| %>
+        <div class="col-md-4 mb-5">
+          <div class="card-wrapper">
+            <div class="shadow p-3 bg-body-tertiary rounded w-100">
+              <div class="card-header">
+                <strong>Ingredient Name:</strong> <%= meez_en_place.ingredient_name %>
+              </div>
+              <div class="card-body">
+                <p class="card-text"><strong>Measurement:</strong> <%= meez_en_place.measurement %></p>
+                <!-- Add other attributes you want to display -->
+                <%= link_to "Show this meez en place", meez_en_place, class: "btn btn-primary btn-sm" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <%= link_to "New meez en place", new_meez_en_place_path, class: "btn btn-primary" %>
+  </div>
+</body>

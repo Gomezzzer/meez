@@ -1,0 +1,27 @@
+<%= form_with(model: meez_en_place) do |form| %>
+  <% if meez_en_place.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(meez_en_place.errors.count, "error") %> prohibited this meez_en_place from being saved:</h2>
+
+      <ul>
+        <% meez_en_place.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :ingredient_name, style: "display: block" %>
+    <%= form.text_field :ingredient_name %>
+  </div>
+
+  <div>
+    <%= form.label :measurement, style: "display: block" %>
+    <%= form.text_field :measurement %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
