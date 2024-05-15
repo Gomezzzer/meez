@@ -21,6 +21,37 @@
   margin-top: 2rem;
   font-family: 'Oswald', sans-serif !important;
 }
+.header {
+  text-align: center;
+  margin-bottom: 20px; 
+}
+.header h1 {
+  color: blueviolet; 
+  margin: 0; 
+  font-size: 32px; 
+}
+.header h2 {
+  margin: 0; 
+  font-size: 24px; 
+}
+
+.get-started-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+/* Ensure the button has no outline when focused */
+.get-started-button:focus {
+  outline: none;
+}
+
+
 
 /* recipe_mod */
 #recipe_mod h1 {
@@ -77,6 +108,15 @@
 }
 
 /* Media queries for different devices */
+@media (max-width: 576px) {
+  .get-started-button {
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+      font-size: 13px;   /* Adjust font size for smaller screens */
+  }
+  .image-container img {
+    max-width: 90%; /* Adjust max-width for smaller screens */
+  }
+}
 @media (min-width: 768px) {
   /* Tablet */
   .img-fluid {

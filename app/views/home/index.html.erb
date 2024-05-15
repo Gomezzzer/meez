@@ -1,12 +1,25 @@
- <body id="home">
-    <h1 style="color: blueviolet;">Meez</h1>
-    <h2>Recipe Modifier</h2> 
+<body id="home">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+        <!-- Headings -->
+        <div class="header">
+            <h1>Meez</h1>
+            <h2>Built for line chefs</h2>
+        </div>
+
+        <!-- Get Started Button -->
+        <%= link_to "Get Started", new_user_registration_path, class: "btn get-started-button" %>
+    </div>
    
-  
     <div class="image-container">
-      <%= image_tag("Chef-amico.png", width: '350 px', class: 'img-fluid') %>
+        <%= image_tag("Chef-amico.png", width: '350 px', class: 'img-fluid') %>
     </div>
 
-  </body>
+ 
+   
+    
+</body>
+
+
+
 
   
