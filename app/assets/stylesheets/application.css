@@ -14,8 +14,20 @@
  *= require_self
  */
 
-
+ 
  /* home index.hmtl.erb */
+
+ #home {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%235000ca" fill-opacity="1" d="M0,160L130.9,192L261.8,192L392.7,32L523.6,320L654.5,64L785.5,128L916.4,64L1047.3,160L1178.2,160L1309.1,256L1440,96L1440,320L1309.1,320L1178.2,320L1047.3,320L916.4,320L785.5,320L654.5,320L523.6,320L392.7,320L261.8,320L130.9,320L0,320Z"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
  #home h1 {
   font-size: 100px;
   margin-top: 2rem;
@@ -26,9 +38,10 @@
   margin-bottom: 20px; 
 }
 .header h1 {
-  color: blueviolet; 
+  color: #5000ca; 
   margin: 0; 
   font-size: 32px; 
+  font-weight: 700;
 }
 .header h2 {
   margin: 0; 
@@ -39,7 +52,7 @@
   padding: 10px 20px;
   font-size: 18px;
   text-decoration: none;
-  background-color: blueviolet;
+  background-color: #5000ca;
   color: white;
   border: none;
   outline: none;
@@ -50,7 +63,13 @@
 .get-started-button:focus {
   outline: none;
 }
-
+.svg-wave {
+  position: relative;
+  width: 100%;
+  height: auto;
+  fill: #f3f4f5;
+  margin-top: 2rem;
+}
 
 
 /* recipe_mod */
@@ -59,6 +78,11 @@
 }
 
  /* recipe_modifier index.html.erb */
+ .right-align {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding-bottom: 1rem;
+}
 .card-wrapper {
   display: flex;
   flex-direction: column;
@@ -118,7 +142,7 @@ body {
 .new_footer_top {
   padding: 120px 0px 270px;
   position: relative;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 .new_footer_area .footer_bottom {
   padding-top: 5px;
@@ -226,7 +250,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .new_footer_top .f_social_icon a:hover {
   background: #5e2ced;
   border-color: #5e2ced;
-color:white;
+  color:white;
 }
 .new_footer_top .f_social_icon a + a {
   margin-left: 4px;
@@ -313,23 +337,31 @@ background-size:100%;
 /* Media queries for different devices */
 @media (max-width: 576px) {
   .get-started-button {
-      padding: 8px 16px; /* Adjust padding for smaller screens */
-      font-size: 13px;   /* Adjust font size for smaller screens */
+      padding: 8px 16px; 
+      font-size: 13px;   
   }
   .image-container img {
-    max-width: 90%; /* Adjust max-width for smaller screens */
+    max-width: 90%; 
+  }
+  #home {
+    background-size: auto 69%; 
+    background-position: center top; 
+  }
+  #home h1 {
+    font-size: 75px;
+  }
+  .header h2 {
+    font-size: 16px;
   }
 }
 @media (min-width: 768px) {
-  /* Tablet */
   .img-fluid {
-    width: 97%; /* Adjust width for tablet screens */
+    width: 97%; 
   }
+ 
 }
-
 @media (min-width: 992px) {
-  /* Desktop */
   .img-fluid {
-    width: 60%; /* Adjust width for desktop screens */
+    width: 60%; 
   }
 }
