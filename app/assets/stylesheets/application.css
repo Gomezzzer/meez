@@ -17,7 +17,10 @@
  
  /* home index.hmtl.erb */
 
- #home {
+html {
+  scroll-behavior: smooth;
+} 
+#home {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -26,9 +29,7 @@
   background-size: cover;
   background-position: center;
 }
-
-
- #home h1 {
+#home h1 {
   font-size: 100px;
   margin-top: 2rem;
   font-family: 'Oswald', sans-serif !important;
@@ -47,7 +48,6 @@
   margin: 0; 
   font-size: 24px; 
 }
-
 .get-started-button {
   padding: 10px 20px;
   font-size: 18px;
@@ -358,7 +358,9 @@ background-size:100%;
   .img-fluid {
     width: 97%; 
   }
- 
+  .mt-4.mb-3 .shadow {
+    width: 50%; /* Ensures the card takes up half width on tablets */
+  } 
 }
 @media (min-width: 992px) {
   .img-fluid {

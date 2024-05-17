@@ -1,19 +1,15 @@
 <div class="mt-4 mb-3">
-  <h1>New recipe modifier</h1>
+  <h1>New Recipe Modifier</h1>
 
+  <div class="shadow p-3 mb-5 bg-body-tertiary rounded w-100 w-md-50 mx-auto">
+    <div class="card-header">
+      <%= render "form", recipe_modifier: @recipe_modifier %>
 
-<div class="shadow p-3 mb-5 bg-body-tertiary rounded w-50">
-  <div class="card-header">
+      <br>
 
-  <%= render "form", recipe_modifier: @recipe_modifier %>
-
-  <br>
-
-  <div>
-    <%= link_to "Back to recipe modifiers", recipe_modifiers_path %>
+      <div>
+        <%= link_to "Back to recipe modifiers", recipe_modifiers_path %>
+      </div>
+    </div>
   </div>
-
-</div>
-
-</div>
 </div>
