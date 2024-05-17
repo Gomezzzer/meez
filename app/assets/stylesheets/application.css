@@ -366,4 +366,7 @@ background-size:100%;
   .img-fluid {
     width: 60%; 
   }
+  .mt-4.mb-3 .shadow {
+    width: 50%; /* Ensures the card takes up half width on desktops */
+  }
 }
