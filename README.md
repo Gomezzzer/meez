@@ -1,54 +1,151 @@
-# Rails Template
+# Meez
 
-This is a base Ruby on Rails repository configured for learning with Codespaces (and Gitpod).
+Meez is a Ruby on Rails application designed specifically for line chefs. This app allows chefs to add, edit, delete, and scale recipes as needed. Additionally, it features a "Meez en Place" function for storing all the items on their station.
 
-- Ruby version: `3.2.1`
-- Rails version: `7.0.4.3`
+## Features
+
+- **Add Recipes**: Easily add new recipes to your collection.
+- **Edit Recipes**: Update existing recipes with new information.
+- **Delete Recipes**: Remove recipes that are no longer needed.
+- **Scale Recipes**: Adjust ingredient quantities to scale recipes up or down.
+- **Meez en Place**: Store and organize all the items on your station.
+
+## Installation
+
+To get started with Meez, follow these steps:
+
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/your-username/meez.git
+    ```
+   
+2. **Navigate to the Project Directory**:
+    ```bash
+    cd meez
+    ```
+
+3. **Install Dependencies**:
+    ```bash
+    bundle install
+    yarn install
+    ```
+
+4. **Set Up the Database**:
+    ```bash
+    rails db:create
+    rails db:migrate
+    rails db:seed
+    ```
+
+5. **Start the Server**:
+    ```bash
+    rails server
+    ```
+
+6. **Visit the App**:
+    Open your browser and go to `http://localhost:3000`.
+
+## Usage
+
+### Adding Recipes
+
+1. Navigate to the Recipes section.
+2. Click on "Add Recipe".
+3. Fill in the recipe details and save.
+
+### Editing Recipes
+
+1. Navigate to the Recipes section.
+2. Select the recipe you want to edit.
+3. Make the necessary changes and save.
+
+### Deleting Recipes
+
+1. Navigate to the Recipes section.
+2. Select the recipe you want to delete.
+3. Click on "Delete" and confirm.
+
+### Scaling Recipes
+
+1. Navigate to the Recipes section.
+2. Select the recipe you want to scale.
+3. Enter the scaling factor and save.
+
+### Meez en Place
+
+1. Navigate to the Meez en Place section.
+2. Add items to your station.
+3. Organize and manage your items as needed.
+
+## Contributing
+
+We welcome contributions to Meez! To contribute, follow these steps:
+
+1. **Fork the Repository**:
+    Click the "Fork" button at the top right of the repository page.
+
+2. **Clone Your Fork**:
+    ```bash
+    git clone https://github.com/your-username/meez.git
+    ```
+
+3. **Create a New Branch**:
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
+
+4. **Make Your Changes**:
+    Make changes to the codebase.
+
+5. **Commit Your Changes**:
+    ```bash
+    git add .
+    git commit -m "Add your commit message here"
+    ```
+
+6. **Push to Your Branch**:
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+
+7. **Open a Pull Request**:
+    Go to the original repository and click "New Pull Request".
+
+FAQ
+How did you implement recipe scaling in Meez?
+To implement recipe scaling, we used the ruby-units gem. This gem allows for easy manipulation and conversion of units. Here’s how you can add it to your project:
+
+Add ruby-units to your Gemfile:
+
+ruby
+Copy code
+gem 'ruby-units'
+Run bundle install to install the gem.
+
+Use ruby-units in your recipe model or service to handle unit conversions and scaling calculations. For example:
+
+ruby
+Copy code
+require 'ruby-units'
+
+def scale_recipe(factor)
+  ingredients.each do |ingredient|
+    amount = Unit(ingredient.amount) * factor
+    ingredient.update(amount: amount.to_s)
+  end
+end
+Can I use Meez on my mobile device?
+Yes, Meez is designed to be responsive and can be used on mobile devices. Simply open your mobile browser and navigate to the app’s URL.
+
+How do I back up my recipes?
+You can back up your recipes by exporting them from the app. Navigate to the Recipes section and look for an export option to download your recipes as a file.
+
+What is "Meez en Place"?
+"Meez en Place" is a feature in Meez that allows chefs to store and organize all the items on their station. It helps in maintaining an efficient and organized workspace.
+
+How do I report a bug or request a feature?
+To report a bug or request a feature, please open an issue on the GitHub repository. Provide as much detail as possible to help us understand and address your request.
 
 
-We've added additional Ruby gems and other software that aren't automatically available in a new Rails app.
 
-### Additional gems:
-
-- [`appdev_support`](https://github.com/firstdraft/appdev_support)
-- [`annotate`](https://github.com/ctran/annotate_models)
-- [`awesome_print`](https://github.com/awesome-print/awesome_print)
-- [`better_errors`](https://github.com/BetterErrors/better_errors)
-- [`binding_of_caller`](https://github.com/banister/binding_of_caller)
-- [`dotenv-rails`](https://github.com/bkeepers/dotenv)
-- [`draft_generators`](https://github.com/firstdraft/draft_generators/)
-- [`draft_matchers`](https://github.com/jelaniwoods/draft_matchers/)
-- [`devise`](https://github.com/heartcombo/devise)
-- [`faker`](https://github.com/faker-ruby/faker)
-- [`grade_runner`](https://github.com/firstdraft/grade_runner/)
-- [`htmlbeautifier`](https://github.com/threedaymonk/htmlbeautifier/)
-- [`http`](https://github.com/httprb/http)
-- [`pry_rails`](https://github.com/pry/pry-rails)
-- [`rails_db`](https://github.com/igorkasyanchuk/rails_db)
-- [`rails-erd`](https://github.com/voormedia/rails-erd)
-- [`rspec-html-matchers`](https://github.com/kucaahbe/rspec-html-matchers)
-- [`rspec-rails`](https://github.com/rspec/rspec-rails)
-- [`rufo`](https://github.com/ruby-formatter/rufo)
-- [`specs_to_readme`](https://github.com/firstdraft/specs_to_readme)
-- [`table_print`](https://github.com/arches/table_print)
-- [`web_git`](https://github.com/firstdraft/web_git)
-- [`webmock`](https://github.com/bblimke/webmock)
-
-### Additional software:
-- OS Ubuntu 20.04.5 LTS
-- Chromedriver
-- Fly.io's `flyctl`
-- Google Chrome (headless browser)
-- Graphviz
-- Heroku 
-- Node JS 18
-- NPM 8.19.3
-- Parity
-- Postgresql 12
-- Redis
-- Yarn
-
-### VS Code extensions:
-- aliariff.vscode-erb-beautify
-- mbessey.vscode-rufo
-- vortizhe.simple-ruby-erb
+Thank you for using Meez! Happy cooking!
