@@ -93,10 +93,10 @@ html {
   margin-bottom: 20px;
 }
 .card-body {
-  margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
+  margin-bottom: 20px;
 }
 .card-footer {
-  margin-top: 2rem;
+  margin-top: auto;
 }
 .modal-overlay {
   top: 0;

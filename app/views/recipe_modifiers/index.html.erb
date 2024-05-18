@@ -1,4 +1,3 @@
-
 <body id="recipe_mod">
   <div class="container mt-4 mb-3">
     <h1>Recipe modifiers</h1>
@@ -34,7 +33,7 @@
           <p><%= link_to "Show this recipe modifier", recipe_modifier %></p>
         </div>
         
- 
+   
       
     <!-- Modal -->
     <div class="modal fade" id="exampleModal<%= recipe_modifier.id %>" tabindex="-1" aria-labelledby="exampleModalLabel<%= recipe_modifier.id %>" aria-hidden="true">
@@ -95,7 +94,7 @@
   });
 </script>
 
-  
+   <%== pagy_bootstrap_nav(@pagy) %>
 </body>
 
 

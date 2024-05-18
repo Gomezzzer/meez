@@ -7,7 +7,7 @@ class RecipeModifiersController < ApplicationController
 
   # GET /recipe_modifiers or /recipe_modifiers.json
   def index
-    @recipe_modifiers = RecipeModifier.all
+    @pagy, @recipe_modifiers = pagy(RecipeModifier.all)
     @original_yields = calculate_original_yields(@recipe_modifiers)
   end
 

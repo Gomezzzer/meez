@@ -3,7 +3,7 @@ class MeezEnPlacesController < ApplicationController
 
   # GET /meez_en_places or /meez_en_places.json
   def index
-    @meez_en_places = MeezEnPlace.all
+   @pagy, @meez_en_places = pagy(MeezEnPlace.all)
   end
 
   # GET /meez_en_places/1 or /meez_en_places/1.json
