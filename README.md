@@ -18,7 +18,7 @@ To get started with Meez, follow these steps:
     ```bash
     git clone https://github.com/your-username/meez.git
     ```
-   
+
 2. **Navigate to the Project Directory**:
     ```bash
     cd meez
@@ -111,41 +111,49 @@ We welcome contributions to Meez! To contribute, follow these steps:
 7. **Open a Pull Request**:
     Go to the original repository and click "New Pull Request".
 
-FAQ
-How did you implement recipe scaling in Meez?
-To implement recipe scaling, we used the ruby-units gem. This gem allows for easy manipulation and conversion of units. Here’s how you can add it to your project:
 
-Add ruby-units to your Gemfile:
 
-ruby
-Copy code
-gem 'ruby-units'
-Run bundle install to install the gem.
+## FAQ
 
-Use ruby-units in your recipe model or service to handle unit conversions and scaling calculations. For example:
+### How did you implement recipe scaling in Meez?
 
-ruby
-Copy code
-require 'ruby-units'
+To implement recipe scaling, we used the `ruby-units` gem. This gem allows for easy manipulation and conversion of units. Here’s how you can add it to your project:
 
-def scale_recipe(factor)
-  ingredients.each do |ingredient|
-    amount = Unit(ingredient.amount) * factor
-    ingredient.update(amount: amount.to_s)
-  end
-end
-Can I use Meez on my mobile device?
+1. Add `ruby-units` to your Gemfile:
+    ```ruby
+    gem 'ruby-units'
+    ```
+
+2. Run `bundle install` to install the gem.
+
+3. Use `ruby-units` in your recipe model or service to handle unit conversions and scaling calculations. For example:
+    ```ruby
+    require 'ruby-units'
+
+    def scale_recipe(factor)
+      ingredients.each do |ingredient|
+        amount = Unit(ingredient.amount) * factor
+        ingredient.update(amount: amount.to_s)
+      end
+    end
+    ```
+
+### Can I use Meez on my mobile device?
+
 Yes, Meez is designed to be responsive and can be used on mobile devices. Simply open your mobile browser and navigate to the app’s URL.
 
-How do I back up my recipes?
+### How do I back up my recipes?
+
 You can back up your recipes by exporting them from the app. Navigate to the Recipes section and look for an export option to download your recipes as a file.
 
-What is "Meez en Place"?
+### What is "Meez en Place"?
+
 "Meez en Place" is a feature in Meez that allows chefs to store and organize all the items on their station. It helps in maintaining an efficient and organized workspace.
 
-How do I report a bug or request a feature?
+### How do I report a bug or request a feature?
+
 To report a bug or request a feature, please open an issue on the GitHub repository. Provide as much detail as possible to help us understand and address your request.
 
-
+---
 
 Thank you for using Meez! Happy cooking!
