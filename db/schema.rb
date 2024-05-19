@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_11_220217) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_19_185454) do
   create_table "meez_en_places", force: :cascade do |t|
     t.string "ingredient_name"
     t.string "measurement"
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_11_220217) do
     t.string "measurements"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

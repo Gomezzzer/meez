@@ -9,6 +9,7 @@
 #  recipe       :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  user_id      :integer
 #
 class RecipeModifier < ApplicationRecord
    # Validations
@@ -18,6 +19,5 @@ class RecipeModifier < ApplicationRecord
    validates :measurements, presence: true
  
    # Associations
-   # If your RecipeModifier model needs to associate with other models,
-   # you can define the associations here.
+   belongs_to :user
 end
