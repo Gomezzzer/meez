@@ -92,7 +92,7 @@ To get started with Meez, follow these steps:
    - As a user, I want to be able to input and organize Meez en Place items so that I can quickly reference them before service and ensure I have all necessary items prepared.
 ## ERD
 
-![Alt text](images/erd.jpeg)
+![uuid=CA9B72B3-2188-49EA-A102-009F05107154 library=1 type=1 mode=1 loc=true cap=true](https://github.com/Gomezzzer/meez/assets/86806874/519e740f-4c71-4ce0-888f-45270d33287c)
 
 ## Contributing
 
