@@ -90,6 +90,9 @@ To get started with Meez, follow these steps:
 
 4. **User will be able to input Meez en Place items to be able to reference before service to ensure they have everything for service**:
    - As a user, I want to be able to input and organize Meez en Place items so that I can quickly reference them before service and ensure I have all necessary items prepared.
+## ERD
+
+![Alt text](images/erd.png)
 
 ## Contributing
 
