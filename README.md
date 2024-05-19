@@ -77,6 +77,20 @@ To get started with Meez, follow these steps:
 2. Add items to your station.
 3. Organize and manage your items as needed.
 
+## User Stories
+
+1. **User will be able to create a recipe**:
+   - As a user, I want to be able to create new recipes so that I can add them to my collection and use them for future reference.
+
+2. **User will be able to edit and delete a recipe**:
+   - As a user, I want to be able to edit existing recipes to update or correct information, and delete recipes that are no longer needed to keep my collection organized.
+
+3. **User will be able to scale a recipe for larger prep demands**:
+   - As a user, I want to be able to scale recipes up or down to accommodate different serving sizes or prep demands, ensuring accurate ingredient quantities.
+
+4. **User will be able to input Meez en Place items to be able to reference before service to ensure they have everything for service**:
+   - As a user, I want to be able to input and organize Meez en Place items so that I can quickly reference them before service and ensure I have all necessary items prepared.
+
 ## Contributing
 
 We welcome contributions to Meez! To contribute, follow these steps:
@@ -111,7 +125,13 @@ We welcome contributions to Meez! To contribute, follow these steps:
 7. **Open a Pull Request**:
     Go to the original repository and click "New Pull Request".
 
+## License
 
+Meez is released under the [MIT License](LICENSE).
+
+## Contact
+
+If you have any questions or need further assistance, feel free to contact us at support@meezapp.com.
 
 ## FAQ
 
