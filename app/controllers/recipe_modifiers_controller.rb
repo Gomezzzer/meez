@@ -135,7 +135,7 @@ class RecipeModifiersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def recipe_modifier_params
-      params.require(:recipe_modifier).permit(:image, :name, :description, :recipe, :measurements)
+      params.require(:recipe_modifier).permit(:remove_image, :image, :name, :description, :recipe, :measurements)
     end
 
     # Calculate original yield for each recipe modifier
