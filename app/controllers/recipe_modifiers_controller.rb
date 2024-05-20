@@ -46,6 +46,9 @@ class RecipeModifiersController < ApplicationController
 
   # PATCH/PUT /recipe_modifiers/1 or /recipe_modifiers/1.json
   def update
+
+    @recipe_modifier.user = current_user 
+
     respond_to do |format|
       if @recipe_modifier.update(recipe_modifier_params)
         format.html { redirect_to recipe_modifier_url(@recipe_modifier), notice: "Recipe modifier was successfully updated." }
@@ -132,7 +135,7 @@ class RecipeModifiersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def recipe_modifier_params
-      params.require(:recipe_modifier).permit(:name, :description, :recipe, :measurements)
+      params.require(:recipe_modifier).permit(:image, :name, :description, :recipe, :measurements)
     end
 
     # Calculate original yield for each recipe modifier

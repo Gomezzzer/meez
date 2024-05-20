@@ -114,3 +114,4 @@ group :test do
 end
 
 gem 'pagy'
+gem 'carrierwave', '~> 3.0'

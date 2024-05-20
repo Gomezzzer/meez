@@ -3,6 +3,13 @@
 
 <%= render @recipe_modifier %>
 
+<div class="col-md-4">
+ <% if @recipe_modifier.image.url %>
+  <%= image_tag @recipe_modifier.image.url, class: 'card-img-right' %>
+ <% end %>
+</div>
+
+
   <%= link_to "Edit this recipe modifier", edit_recipe_modifier_path(@recipe_modifier) %> |
   <%= link_to "Back to recipe modifiers", recipe_modifiers_path %> 
 

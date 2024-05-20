@@ -4,6 +4,7 @@
 #
 #  id           :integer          not null, primary key
 #  description  :text
+#  image        :string
 #  measurements :string
 #  name         :string
 #  recipe       :string
@@ -20,4 +21,6 @@ class RecipeModifier < ApplicationRecord
  
    # Associations
    belongs_to :user
+
+   mount_uploader :image, ImageUploader
 end
