@@ -80,7 +80,7 @@ html {
  /* recipe_modifier index.html.erb */
  .right-align {
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: flex-end; 
   padding-bottom: 1rem;
 }
 .card-wrapper {
@@ -103,13 +103,13 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for opacity */
-  z-index: 1050; /* Ensure the overlay appears above the modal */
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1050; 
 }
 .btn-blueviolet {
   background-color: blueviolet;
   border-color: blueviolet;
-  color: white; /* Change text color to white for better contrast */
+  color: white; 
 }
 
 .btn-blueviolet:hover {
@@ -130,10 +130,10 @@ html {
 }
 
 .img-fluid {
-  max-width: 100%; /* Set maximum width */
+  max-width: 100%; 
   height: auto;
   display: block;
-  width: 100%; /* Set initial width */
+  width: 100%; 
 }
 body {
   background: #fbfbfd;
@@ -364,7 +364,7 @@ background-size:100%;
     width: 97%; 
   }
   .mt-4.mb-3 .shadow {
-    width: 50%; /* Ensures the card takes up half width on tablets */
+    width: 50%; 
   } 
 }
 @media (min-width: 992px) {
@@ -372,6 +372,6 @@ background-size:100%;
     width: 60%; 
   }
   .mt-4.mb-3 .shadow {
-    width: 50%; /* Ensures the card takes up half width on desktops */
+    width: 50%; 
   }
 }
