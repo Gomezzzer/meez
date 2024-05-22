@@ -26,4 +26,5 @@ class User < ApplicationRecord
 
          has_many :recipe_modifiers
             
+         has_one_attached :image
 end
