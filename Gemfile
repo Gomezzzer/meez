@@ -5,6 +5,8 @@ ruby "3.2.1"
 
 gem 'ruby-units'
 
+gem 'aws-sdk-s3', require: false
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
@@ -115,4 +117,3 @@ end
 
 gem 'pagy'
 gem 'carrierwave', '~> 3.0'
-gem 'aws-sdk-s3', require: false
