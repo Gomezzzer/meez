@@ -1,7 +1,3 @@
-#require 'rubygems'
-#require 'ruby-units'
-
-
 class RecipeModifiersController < ApplicationController
   before_action :set_recipe_modifier, only: %i[ show edit update destroy ]
 
