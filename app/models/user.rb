@@ -25,6 +25,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_many :recipe_modifiers
-            
-         has_one_attached :image
 end
