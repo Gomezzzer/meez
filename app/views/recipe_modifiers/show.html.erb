@@ -10,9 +10,15 @@
 </div>
 
 
-  <%= link_to "Edit this recipe modifier", edit_recipe_modifier_path(@recipe_modifier) %> |
-  <%= link_to "Back to recipe modifiers", recipe_modifiers_path %> 
+ 
+<div class="custom-button-row mt-4">
+  <div class="col-auto">
+    <%= link_to "Back", recipe_modifiers_path, class: "btn custom-outline-btn" %>
+  </div>
+  <div class="col-auto">
+    <%= button_to "Delete", @recipe_modifier, method: :delete, data: { confirm: "Are you sure?" }, class: "btn custom-outline-btn" %>
+  </div>
+</div>
 
-  
 
-  <%= button_to "Destroy this recipe modifier", @recipe_modifier, method: :delete %>
+<hr>

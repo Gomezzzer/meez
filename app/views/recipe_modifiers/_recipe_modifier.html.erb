@@ -18,7 +18,8 @@
         <h5 class="card-title"><strong>Measurements:</strong></h5>
         <p class="card-text"><%= recipe_modifier.measurements %>.</p>
 
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <%= link_to "Edit this recipe", edit_recipe_modifier_path(@recipe_modifier), class: "btn custom-outline-btn" %>
+
       </div>
     </div>
   </div>

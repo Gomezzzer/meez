@@ -78,10 +78,10 @@ html {
 }
 
  /* recipe_modifier index.html.erb */
- .right-align {
-  display: flex;
-  justify-content: flex-end; 
-  padding-bottom: 1rem;
+.right-align {
+display: flex;
+justify-content: flex-end; 
+padding-bottom: 1rem;
 }
 .card-wrapper {
   display: flex;
@@ -121,6 +121,49 @@ html {
   height: auto; 
   object-fit: cover; 
 }
+.custom-button-row {
+  margin-top: 1rem; /* Adjust the margin as needed */
+  display: flex;
+  gap: 0.5rem; /* Adjust the gap between buttons as needed */
+}
+
+.custom-outline-btn {
+  background-color: transparent;
+  border: 2px solid #007bff; /* Bootstrap primary blue */
+  color: #007bff; /* Bootstrap primary blue */
+  padding: 0.25rem 0.5rem; /* Smaller padding for smaller buttons */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.875rem; /* Smaller font size */
+  cursor: pointer;
+  border-radius: 0.25rem; /* Adjust the border radius as needed */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.custom-outline-btn:hover {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+}
+
+/* form */
+.form-horizontal .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-horizontal .form-control, .form-horizontal .form-control-file {
+  margin-top: 0.5rem;
+}
+
+.form-horizontal .form-check {
+  margin-top: 1rem;
+}
+
+.form-horizontal .btn {
+  margin-top: 1rem;
+}
+
+
 
 /* Default styles */
 .image-container {

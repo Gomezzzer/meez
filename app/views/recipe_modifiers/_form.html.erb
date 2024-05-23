@@ -1,8 +1,7 @@
-<%= form_with(model: recipe_modifier) do |form| %>
+<%= form_with(model: recipe_modifier, local: true, class: "form-horizontal") do |form| %>
   <% if recipe_modifier.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(recipe_modifier.errors.count, "error") %> prohibited this recipe_modifier from being saved:</h2>
-
+    <div class="alert alert-danger">
+      <h4><%= pluralize(recipe_modifier.errors.count, "error") %> prohibited this recipe modifier from being saved:</h4>
       <ul>
         <% recipe_modifier.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,36 +10,37 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.file_field :image %>
-  </div>
-    <%= form.check_box :remove_image %>
-        Remove Image 
-  <div>
-  
+  <div class="form-group">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.label :description, class: "form-label" %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="form-group">
+    <%= form.label :recipe, class: "form-label" %>
+    <%= form.text_area :recipe, rows: 5, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :recipe, style: "display: block" %>
-    <%= form.text_field :recipe %>
+  <div class="form-group">
+    <%= form.label :measurements, class: "form-label" %>
+    <%= form.text_area :measurements, rows: 5, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :measurements, style: "display: block" %>
-    <%= form.text_area :measurements, rows: 5 %>
+  <div class="form-group custom-button-row">
+    <%= form.submit "Save", class: "custom-outline-btn" %>
+    <%= link_to "Cancel", recipe_modifiers_path, class: "custom-outline-btn" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-group mt-4">
+    <%= form.file_field :image, class: "form-control-file" %>
+    <div class="form-check">
+      <%= form.check_box :remove_image, class: "form-check-input" %>
+      <%= form.label :remove_image, "Remove Image", class: "form-check-label" %>
+    </div>
   </div>
 <% end %>
+
