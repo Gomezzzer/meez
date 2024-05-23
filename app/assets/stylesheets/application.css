@@ -42,7 +42,7 @@ html {
   color: #5000ca; 
   margin: 0; 
   font-size: 32px; 
-  font-weight: 700;
+  font-weight: 500;
 }
 .header h2 {
   margin: 0; 
@@ -93,11 +93,20 @@ padding-bottom: 1rem;
   margin-bottom: 20px;
 }
 .card-body {
+  flex: 1 1 auto; 
   margin-bottom: 20px;
 }
 .card-footer {
   margin-top: auto;
 }
+.custom-footer {
+  margin-bottom: 1rem; /* Margin at the bottom of the container */
+}
+
+.custom-footer .btn {
+  margin-bottom: 1rem; /* Margin at the bottom of the buttons */
+}
+
 .modal-overlay {
   top: 0;
   left: 0;
@@ -107,15 +116,24 @@ padding-bottom: 1rem;
   z-index: 1050; 
 }
 .btn-blueviolet {
-  background-color: blueviolet;
-  border-color: blueviolet;
-  color: white; 
+  background-color: transparent; /* Transparent background */
+  border: 2px solid blueviolet; /* Blueviolet border */
+  color: blueviolet; /* Blueviolet text color */
+  padding: 0.25rem 0.5rem; /* Smaller padding for smaller buttons */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.875rem; /* Smaller font size */
+  cursor: pointer;
+  border-radius: 0.25rem; /* Adjust the border radius as needed */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .btn-blueviolet:hover {
-  background-color: darkviolet;
-  border-color: darkviolet;
+  background-color: blueviolet; /* Blueviolet background on hover */
+  color: white; /* White text color on hover */
 }
+
 .card-img-right {
   width: 100%; 
   height: auto; 

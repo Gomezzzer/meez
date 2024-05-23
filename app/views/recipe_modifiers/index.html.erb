@@ -1,6 +1,7 @@
 <body id="recipe_mod">
   <div class="container mt-4 mb-3">
-    <h1>Recipe modifiers</h1>
+    <h1>Recipes</h1>
+    <hr>
    <div class="m-2 right-align"> 
     <%= link_to "Add New recipe", new_recipe_modifier_path, class: "btn btn-blueviolet" %>
    </div>
@@ -22,18 +23,18 @@
                   <% end %>
                 </ul>
               </div>
-              <div class="card-footer">
-               <!-- Button trigger modal -->
-                <button type="button" class="btn btn-blueviolet adjust-yield-btn" data-bs-toggle="modal" data-bs-target="#exampleModal<%= recipe_modifier.id %>">
-                  Adjust Yield
-                </button>
-              </div>
+              <br>
+                <div class="card-footer">
+                 <div class="card-footer custom-footer">
+                  <%= link_to "Adjust Yield", "#", class: "btn btn-blueviolet adjust-yield-link", data: { bs_toggle: "modal", bs_target: "#exampleModal#{recipe_modifier.id}" } %>
+                  <%= link_to "Show this recipe", recipe_modifier, class: "btn btn-blueviolet" %>
+                </div>
+             </div>
             </div>
           </div>
-          <p><%= link_to "Show this recipe modifier", recipe_modifier %></p>
         </div>
-        
-   
+       
+    
       
     <!-- Modal -->
     <div class="modal fade" id="exampleModal<%= recipe_modifier.id %>" tabindex="-1" aria-labelledby="exampleModalLabel<%= recipe_modifier.id %>" aria-hidden="true">
