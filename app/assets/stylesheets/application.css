@@ -107,6 +107,8 @@ padding-bottom: 1rem;
   margin-bottom: 1rem; /* Margin at the bottom of the buttons */
 }
 
+
+
 .modal-overlay {
   top: 0;
   left: 0;
@@ -138,6 +140,7 @@ padding-bottom: 1rem;
   width: 100%; 
   height: auto; 
   object-fit: cover; 
+  border-radius: 4%;
 }
 .custom-button-row {
   margin-top: 1rem; /* Adjust the margin as needed */

@@ -3,7 +3,7 @@
 
 <%= render @recipe_modifier %>
 
-<div class="col-md-4">
+<div class="col-md-6">
  <% if @recipe_modifier.image.url %>
   <%= image_tag @recipe_modifier.image.url, class: 'card-img-right' %>
  <% end %>
