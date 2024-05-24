@@ -1,5 +1,6 @@
 class RecipeModifiersController < ApplicationController
   before_action :set_recipe_modifier, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /recipe_modifiers or /recipe_modifiers.json
   def index
@@ -16,10 +17,12 @@ class RecipeModifiersController < ApplicationController
   # GET /recipe_modifiers/new
   def new
     @recipe_modifier = RecipeModifier.new
+    @recipe_modifier = current_user.recipe_modifiers.build
   end
 
   # GET /recipe_modifiers/1/edit
   def edit
+    @recipe_modifier = current_user.recipe_modifiers.find(params[:id])
   end
 
 
@@ -28,6 +31,7 @@ class RecipeModifiersController < ApplicationController
   # POST /recipe_modifiers or /recipe_modifiers.json
   def create
     @recipe_modifier = RecipeModifier.new(recipe_modifier_params)
+    @recipe_modifier = current_user.recipe_modifiers.build(recipe_modifier_params)
 
     respond_to do |format|
       if @recipe_modifier.save
@@ -42,7 +46,7 @@ class RecipeModifiersController < ApplicationController
 
   # PATCH/PUT /recipe_modifiers/1 or /recipe_modifiers/1.json
   def update
-
+    @recipe_modifier = current_user.recipe_modifiers.find(params[:id])
     @recipe_modifier.user = current_user 
 
     respond_to do |format|

@@ -13,14 +13,17 @@
 #  user_id      :integer
 #
 class RecipeModifier < ApplicationRecord
+   # Associations
+   belongs_to :user
+
    # Validations
+   validates :user, presence: true
    validates :name, presence: true
    validates :description, presence: true
    validates :recipe, presence: true
    validates :measurements, presence: true
  
-   # Associations
-   belongs_to :user
+   
 
    mount_uploader :image, ImageUploader
 end
