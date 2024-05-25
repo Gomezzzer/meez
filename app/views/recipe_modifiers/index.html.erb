@@ -2,9 +2,9 @@
   <div class="container mt-4 mb-3">
     <h1>Recipes</h1>
     <hr>
-   <div class="m-2 right-align"> 
-    <%= link_to "Add New recipe", new_recipe_modifier_path, class: "btn btn-blueviolet" %>
-   </div>
+    <div class="m-2 right-align"> 
+      <%= link_to "Add New recipe", new_recipe_modifier_path, class: "btn btn-blueviolet" %>
+    </div>
     <div class="row"> 
       <% @recipe_modifiers.each do |recipe_modifier| %>
         <div class="col-md-6 mb-5">
@@ -24,42 +24,39 @@
                 </ul>
               </div>
               <br>
-                <div class="card-footer">
-                 <div class="card-footer custom-footer">
-                  <%= link_to "Adjust Yield", "#", class: "btn btn-blueviolet adjust-yield-link", data: { bs_toggle: "modal", bs_target: "#exampleModal#{recipe_modifier.id}" } %>
-                  <%= link_to "Show this recipe", recipe_modifier, class: "btn btn-blueviolet" %>
+              <div class="card-footer custom-footer">
+                <%= link_to "Adjust Yield", "#", class: "btn btn-blueviolet adjust-yield-link", data: { bs_toggle: "modal", bs_target: "#exampleModal#{recipe_modifier.id}" } %>
+                <%= link_to "Show this recipe", recipe_modifier, class: "btn btn-blueviolet" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal<%= recipe_modifier.id %>" tabindex="-1" aria-labelledby="exampleModalLabel<%= recipe_modifier.id %>" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel<%= recipe_modifier.id %>">Adjust Yield</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!-- Additional input fields for scaling -->
+                <div class="mb-3">
+                  <label for="scaleFactorInput">Scale Factor:</label>
+                  <input type="number" class="form-control" id="scaleFactorInput" placeholder="Enter scale factor" min="0" step="1">
                 </div>
-             </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- Move the link button to the footer -->
+                <%= link_to 'Desired Yield Page', desired_yield_page_recipe_modifiers_path(recipe_modifier_id: recipe_modifier.id, scaleFactor: @scaling_factor), class: 'btn btn-primary' %>
+              </div>
             </div>
           </div>
         </div>
-       
-    
-      
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal<%= recipe_modifier.id %>" tabindex="-1" aria-labelledby="exampleModalLabel<%= recipe_modifier.id %>" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel<%= recipe_modifier.id %>">Adjust Yield</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Additional input fields for scaling -->
-            <div class="mb-3">
-              <label for="scaleFactorInput">Scale Factor:</label>
-              <input type="number" class="form-control" id="scaleFactorInput" placeholder="Enter scale factor" min="0" step="1">
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <!-- Move the link button to the footer -->
-            <%= link_to 'Desired Yield Page', desired_yield_page_recipe_modifiers_path(recipe_modifier_id: recipe_modifier.id, scaleFactor: @scaling_factor), class: 'btn btn-primary' %>
-          </div>
-        </div>
-      </div>
+      <% end %>
     </div>
- <% end %>
+  </div>
 
 
   
