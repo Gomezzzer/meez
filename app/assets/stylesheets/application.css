@@ -20,6 +20,11 @@
 html {
   scroll-behavior: smooth;
 } 
+.custom-navbar {
+  padding-top: 20px; 
+  padding-bottom: 20px; 
+}
+
 #home {
   margin: 0;
   padding: 0;
@@ -421,6 +426,10 @@ h1, h2, h3, h4, h5, h6 {
   }
   .header h2 {
     font-size: 16px;
+  }
+  .custom-navbar {
+    padding-top: 5px; 
+    padding-bottom: 5px; 
   }
 }
 @media (min-width: 768px) {
