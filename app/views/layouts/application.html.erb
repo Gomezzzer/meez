@@ -30,19 +30,6 @@
   </div>
  
  
-  
-  <script>
-    $(document).ready(function() {
-      // Add click event listener to document body
-      $(document.body).click(function(event) {
-        // Check if the clicked element is not within the navbar or is not the burger button
-        if (!$(event.target).closest('.navbar').length && !$(event.target).is('.navbar-toggler')) {
-          // Close the navbar
-          $('.navbar-collapse').collapse('hide');
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
