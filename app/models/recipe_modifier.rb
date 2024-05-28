@@ -45,5 +45,16 @@ class RecipeModifier < ApplicationRecord
        end
      end
    end
+
+   
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w[name description ingredients measurements]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    %w[user]
+  end
+
  end
  

@@ -50,10 +50,12 @@
         </li>
         
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-dark" type="submit">Search</button>
-      </form>
+      <%= search_form_for @q, url: recipe_modifiers_path, method: :get, class: 'd-flex' do |f| %>
+          <div class="form-group">
+            <%= f.text_field :name_cont, class: 'form-control me-2', placeholder: 'Search by name' %>
+          </div>
+          <%= f.submit 'Search', class: 'btn btn-outline-dark' %>
+        <% end %>
     </div>
   </div>
 </nav>

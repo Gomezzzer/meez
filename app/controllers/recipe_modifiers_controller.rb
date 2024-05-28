@@ -4,7 +4,8 @@ class RecipeModifiersController < ApplicationController
 
   # GET /recipe_modifiers or /recipe_modifiers.json
   def index
-    @pagy, @recipe_modifiers = pagy(current_user.recipe_modifiers.all)
+    @q = current_user.recipe_modifiers.ransack(params[:q])
+    @pagy, @recipe_modifiers = pagy(@q.result(distinct: true))
     @original_yields = calculate_original_yields(@recipe_modifiers)
   end
 
@@ -124,4 +125,3 @@ class RecipeModifiersController < ApplicationController
     original_yields
   end
 end
-
