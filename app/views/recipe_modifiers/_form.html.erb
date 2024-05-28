@@ -42,5 +42,15 @@
       <%= form.label :remove_image, "Remove Image", class: "form-check-label" %>
     </div>
   </div>
+
+  <div class="form-group mt-4">
+    <%= form.label :allergies, "Allergies", class: "form-label" %><br>
+    <% RecipeModifier::ALLERGIES.each do |allergy| %>
+      <div class="form-check form-check-inline">
+        <%= check_box_tag "recipe_modifier[allergies][]", allergy, recipe_modifier.allergies_list.include?(allergy), id: "recipe_modifier_allergies_#{allergy}", class: "form-check-input" %>
+        <%= label_tag "recipe_modifier_allergies_#{allergy}", allergy.capitalize, class: "form-check-label" %>
+      </div>
+    <% end %>
+  </div>
 <% end %>
 

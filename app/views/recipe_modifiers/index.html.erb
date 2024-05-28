@@ -25,6 +25,12 @@
               </div>
               <br>
               <div class="card-footer custom-footer">
+              <p class="card-title"><strong>Allergies:</strong></p>
+               <div class="allergy-icons mb-3">
+                <% recipe_modifier.allergies_list.each do |allergy| %>
+                  <%= image_tag("#{allergy}.png", alt: allergy, class: "allergy-icon") if RecipeModifier::ALLERGIES.include?(allergy) %>
+                <% end %>
+              </div>
                 <%= link_to "Adjust Yield", "#", class: "btn btn-blueviolet adjust-yield-link", data: { bs_toggle: "modal", bs_target: "#exampleModal#{recipe_modifier.id}" } %>
                 <%= link_to "Show this recipe", recipe_modifier, class: "btn btn-blueviolet" %>
               </div>

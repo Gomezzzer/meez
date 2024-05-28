@@ -13,17 +13,26 @@
         <p class="card-text"><%= recipe_modifier.description %></p>
 
         <h5 class="card-title"><strong>Recipe:</strong></h5>
-        <p class="card-text"><%= recipe_modifier.recipe %>.</p>
+        <p class="card-text"><%= recipe_modifier.recipe %></p>
 
         <h5 class="card-title"><strong>Measurements:</strong></h5>
-        <p class="card-text"><%= recipe_modifier.measurements %>.</p>
+        <p class="card-text"><%= recipe_modifier.measurements %></p>
+      </div>
 
-        <%= link_to "Edit this recipe", edit_recipe_modifier_path(@recipe_modifier), class: "btn custom-outline-btn" %>
-
+      <div class="card-footer">
+        <h5 class="card-title"><strong>Allergies:</strong></h5>
+        <div class="allergy-icons">
+          <% recipe_modifier.allergies_list.each do |allergy| %>
+            <%= image_tag("#{allergy}.png", alt: allergy, class: "allergy-icon") if RecipeModifier::ALLERGIES.include?(allergy) %>
+          <% end %>
+        </div>
+        <%= link_to "Edit this recipe", edit_recipe_modifier_path(recipe_modifier), class: "btn custom-outline-btn mt-3" %>
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 

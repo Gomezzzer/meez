@@ -111,6 +111,17 @@ padding-bottom: 1rem;
 .custom-footer .btn {
   margin-bottom: 1rem; /* Margin at the bottom of the buttons */
 }
+.allergy-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.allergy-icon {
+  width: 30px;
+  height: 30px;
+}
 
 
 
