@@ -30,20 +30,7 @@
     <%= form.text_area :measurements, rows: 5, class: "form-control" %>
   </div>
 
-  <div class="form-group custom-button-row">
-    <%= form.submit "Save", class: "custom-outline-btn" %>
-    <%= link_to "Cancel", recipe_modifiers_path, class: "custom-outline-btn" %>
-  </div>
-
-  <div class="form-group mt-4">
-    <%= form.file_field :image, class: "form-control-file" %>
-    <div class="form-check">
-      <%= form.check_box :remove_image, class: "form-check-input" %>
-      <%= form.label :remove_image, "Remove Image", class: "form-check-label" %>
-    </div>
-  </div>
-
-  <div class="form-group mt-4">
+   <div class="form-group mt-4">
     <%= form.label :allergies, "Allergies", class: "form-label" %><br>
     <% RecipeModifier::ALLERGIES.each do |allergy| %>
       <div class="form-check form-check-inline">
@@ -52,5 +39,23 @@
       </div>
     <% end %>
   </div>
-<% end %>
 
+  <hr>
+
+  <div class="form-group mt-4">
+   <p class="card-title">Add Image</p>
+    <%= form.file_field :image, class: "form-control-file" %>
+    <div class="form-check">
+      <%= form.check_box :remove_image, class: "form-check-input" %>
+      <%= form.label :remove_image, "Remove Image", class: "form-check-label" %>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="form-group custom-button-row mt-2">
+    <%= form.submit "Save", class: "custom-outline-btn" %> |
+    <%= link_to "Cancel", recipe_modifiers_path, class: "custom-outline-btn" %>
+  </div>
+
+<% end %>
