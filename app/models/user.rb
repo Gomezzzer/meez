@@ -25,4 +25,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_many :recipe_modifiers
+         has_many :meez_en_places, dependent: :destroy
 end

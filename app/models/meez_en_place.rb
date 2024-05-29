@@ -7,8 +7,16 @@
 #  measurement     :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  user_id         :integer
 #
-# app/models/meez_en_place.rb
+# Indexes
+#
+#  index_meez_en_places_on_user_id  (user_id)
+#
+# Foreign Keys
+#
+#  user_id  (user_id => users.id)
+#
 class MeezEnPlace < ApplicationRecord
   # Validations
   validates :ingredient_name, presence: true
@@ -16,5 +24,5 @@ class MeezEnPlace < ApplicationRecord
 
   # Associations
   # You can add associations here if needed, for example:
-  # belongs_to :recipe
+   belongs_to :user
 end
