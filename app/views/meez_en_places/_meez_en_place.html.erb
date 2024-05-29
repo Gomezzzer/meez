@@ -1,12 +1,19 @@
-<div id="<%= dom_id meez_en_place %>">
-  <p>
-    <strong>Ingredient name:</strong>
-    <%= meez_en_place.ingredient_name %>
-  </p>
+<div class="col-md-4">
+  <div id="<%= dom_id meez_en_place %>">
+   <div class="shadow p-3 mb-5 bg-body-tertiary rounded w-md-50 mx-auto">
+      <div class="card-header">
+        <p>
+          <strong>Ingredient name:</strong>
+          <%= meez_en_place.ingredient_name %>
+        </p>
 
-  <p>
-    <strong>Measurement:</strong>
-    <%= meez_en_place.measurement %>
-  </p>
-
+        <p>
+          <strong>Measurement:</strong>
+          <%= meez_en_place.measurement %>
+        </p>
+        <%= link_to "Edit this meez", edit_meez_en_place_path(@meez_en_place), class: "btn custom-outline-btn mt-3" %>
+    </div>
+   </div>
+  </div>
 </div>
+ 

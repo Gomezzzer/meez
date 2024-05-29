@@ -25,7 +25,7 @@
               </div>
               <br>
               <div class="card-footer custom-footer">
-              <p class="card-title"><strong>Allergies:</strong></p>
+              <p class="card-title"><strong>Allergies/Dietary:</strong></p>
                <div class="allergy-icons mb-3">
                 <% recipe_modifier.allergies_list.each do |allergy| %>
                   <%= image_tag("#{allergy}.png", alt: allergy, class: "allergy-icon") if RecipeModifier::ALLERGIES.include?(allergy) %>

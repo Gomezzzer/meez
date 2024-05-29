@@ -2,10 +2,10 @@
   <div class="recipe-modifier" id="<%= dom_id recipe_modifier %>">
     <div class="shadow p-3 mb-5 bg-body-tertiary rounded w-md-50 mx-auto">
       <div class="card-header">
-        <p>
+        <h5 class="card-title mb-2">
           <strong>Name:</strong>
           <%= recipe_modifier.name %>
-        </p>
+        </h5>
       </div>
 
       <div class="card-body">
@@ -20,7 +20,7 @@
       </div>
 
       <div class="card-footer">
-        <h5 class="card-title"><strong>Allergies:</strong></h5>
+        <h5 class="card-title"><strong>Allergies/Dietary:</strong></h5>
         <div class="allergy-icons">
           <% recipe_modifier.allergies_list.each do |allergy| %>
             <%= image_tag("#{allergy}.png", alt: allergy, class: "allergy-icon") if RecipeModifier::ALLERGIES.include?(allergy) %>
