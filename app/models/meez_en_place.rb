@@ -21,6 +21,8 @@ class MeezEnPlace < ApplicationRecord
   # Validations
   validates :ingredient_name, presence: true
   validates :measurement, presence: true
+  validates :user, presence: true
+  
 
   # Associations
   # You can add associations here if needed, for example:
