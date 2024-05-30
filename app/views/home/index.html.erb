@@ -9,12 +9,16 @@
         <!-- Get Started Button -->
         <%= link_to "Get Started", new_user_registration_path, class: "btn get-started-button" %>
     </div>
-   
+  
     <div class="image-container">
         <%= image_tag("Chef-amico.png", width: '350 px', class: 'img-fluid') %>
     </div>
+   
+    <%= render 'home/testimonials' %>
 
     <%= render 'shared/svg_wave' %>
+
+     
 
 </body>
 
