@@ -23,6 +23,7 @@ class MeezEnPlacesController < ApplicationController
   # POST /meez_en_places or /meez_en_places.json
   def create
     @meez_en_place = MeezEnPlace.new(meez_en_place_params)
+    @meez_en_place = current_user.meez_en_places.build(meez_en_place_params)
 
     respond_to do |format|
       if @meez_en_place.save
