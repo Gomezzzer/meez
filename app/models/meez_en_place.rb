@@ -9,10 +9,6 @@
 #  updated_at      :datetime         not null
 #  user_id         :integer
 #
-# Indexes
-#
-#  index_meez_en_places_on_user_id  (user_id)
-#
 # Foreign Keys
 #
 #  user_id  (user_id => users.id)
