@@ -1,5 +1,6 @@
 class MeezEnPlacesController < ApplicationController
   before_action :set_meez_en_place, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /meez_en_places or /meez_en_places.json
   def index
