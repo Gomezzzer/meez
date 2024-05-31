@@ -96,7 +96,7 @@ To get started with Meez, follow these steps:
 3. **User will be able to scale a recipe for larger prep demands**:
    - As a user, I want to be able to scale recipes up or down to accommodate different serving sizes or prep demands, ensuring accurate ingredient quantities.
 
-4.  **User will be able to capture images for recipes**:
+4. **User will be able to capture images for recipes**:
    - As a user, I want to be able to capture images with my phone or webcam and upload to recipe card. Optionally I can choose to upload files from my device or desktop.
 
 5. **User will be able to input Meez en Place items to be able to reference before service to ensure they have everything for service**:
