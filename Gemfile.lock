@@ -119,6 +119,7 @@ GEM
       image_processing (~> 1.1)
       marcel (~> 1.0.0)
       ssrf_filter (~> 1.0)
+    chartkick (5.0.7)
     choice (0.2.0)
     coderay (1.1.3)
     color (1.8)
@@ -195,6 +196,8 @@ GEM
       octokit (~> 5.0)
       oj (~> 3.13.12)
       rake (~> 13)
+    groupdate (6.4.0)
+      activesupport (>= 6.1)
     hashdiff (1.0.1)
     htmlbeautifier (1.4.2)
     http (5.1.1)
@@ -471,6 +474,7 @@ DEPENDENCIES
   bootsnap
   capybara
   carrierwave (~> 3.0)
+  chartkick
   debug
   devise
   dotenv-rails
@@ -479,6 +483,7 @@ DEPENDENCIES
   faker
   fog-aws
   grade_runner
+  groupdate
   htmlbeautifier
   http
   image_processing (~> 1.2)
