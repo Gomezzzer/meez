@@ -14,13 +14,11 @@
 #  user_id  (user_id => users.id)
 #
 class MeezEnPlace < ApplicationRecord
+  # Associations
+  belongs_to :user
+
+
   # Validations
   validates :ingredient_name, presence: true
   validates :measurement, presence: true
-  
-  
-
-  # Associations
-  # You can add associations here if needed, for example:
-   belongs_to :user
 end

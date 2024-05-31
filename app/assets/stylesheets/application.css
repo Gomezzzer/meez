@@ -25,6 +25,8 @@ body{
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1.3rem;
+  transition: all 0.3s ease-in-out;
 }
 /*a:link,a:active,a:visited,a:hover{
 	color:#3f51b5;
@@ -162,6 +164,9 @@ body{
 	{
 		transform: scale(0.8);
 	}
+  .outerdiv {
+    margin-top: 2rem;
+  }
 }
 
 @media only screen and (max-width: 1000px)
@@ -206,6 +211,10 @@ body{
  
  /* home index.hmtl.erb */
 
+body {
+  transition: all 0.3s ease-in-out;
+}
+
 html {
   scroll-behavior: smooth;
 } 
@@ -213,7 +222,6 @@ html {
   padding-top: 20px; 
   padding-bottom: 20px; 
 }
-
 
 #home {
   margin: 0;
