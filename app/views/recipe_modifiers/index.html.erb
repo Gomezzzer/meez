@@ -73,29 +73,29 @@
 
 <script>
 // Function to handle desired yield page button click
-  $(document).ready(function() {
-    $('.btn-primary').on('click', function(e) {
-      e.preventDefault(); // Prevent default link behavior
+ $(document).ready(function() {
+  $('.btn-primary').on('click', function(e) {
+    e.preventDefault(); // Prevent default link behavior
 
-      // Find the closest modal to the clicked button
-      var modal = $(this).closest('.modal');
+    // Find the closest modal to the clicked button
+    var modal = $(this).closest('.modal');
 
-      // Extract recipe modifier ID from modal's ID attribute
-      var recipeModifierId = modal.attr('id').replace('exampleModal', '');
+    // Extract recipe modifier ID from modal's ID attribute
+    var recipeModifierId = modal.attr('id').replace('exampleModal', '');
 
-      // Retrieve scale factor input value within the modal
-      var scaleFactor = parseFloat(modal.find('#scaleFactorInput').val());
+    // Retrieve scale factor input value within the modal
+    var scaleFactor = parseFloat(modal.find('#scaleFactorInput').val());
 
-      // Validate scale factor input
-      if (isNaN(scaleFactor) || scaleFactor <= 0) {
-        alert('Please enter a valid scale factor.');
-        return;
-      }
+    // Validate scale factor input
+    if (isNaN(scaleFactor) || scaleFactor <= 0) {
+      alert('Please enter a valid scale factor.');
+      return;
+    }
 
-      // Redirect to the desired yield page with the scale factor and recipe modifier ID as query parameters
-      window.location.href = '<%= url_for(controller: 'recipe_modifiers', action: 'desired_yield_page') %>?recipe_modifier_id=' + recipeModifierId + '&scaleFactor=' + encodeURIComponent(scaleFactor);
-    });
+    // Redirect to the desired yield page with the scale factor and recipe modifier ID as query parameters
+    window.location.href = '<%= url_for(controller: 'recipe_modifiers', action: 'desired_yield_page') %>?recipe_modifier_id=' + recipeModifierId + '&scaleFactor=' + encodeURIComponent(scaleFactor);
   });
+});
 </script>
 
    <%== pagy_bootstrap_nav(@pagy) %>

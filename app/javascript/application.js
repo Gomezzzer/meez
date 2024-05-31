@@ -9,3 +9,6 @@ import jQuery from "jquery";
 window.jQuery = window.$ = jQuery;
 
 import "rails-ujs"; // Import jQuery-ujs
+
+
+
