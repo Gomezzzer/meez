@@ -8,6 +8,8 @@ Meez is a Ruby on Rails application designed specifically for line chefs. This a
 - **Edit Recipes**: Update existing recipes with new information.
 - **Delete Recipes**: Remove recipes that are no longer needed.
 - **Scale Recipes**: Adjust ingredient quantities to scale recipes up or down.
+- **Take Photographs**:  Use the camera on your mobile device or webcam on your desktop to capture images of recipes or ingredients directly within the app.
+- **Upload Images**: Upload images from your device's gallery or file system to add visuals to your recipes.
 - **Meez en Place**: Store and organize all the items on your station.
 
 ## Installation
@@ -71,6 +73,12 @@ To get started with Meez, follow these steps:
 2. Select the recipe you want to scale.
 3. Enter the scaling factor and save.
 
+### Photographing and uploading images
+
+1. Click the "Choose file" button to use your device's camera. Capture the image and confirm.
+2. Click the "Choose file" button to select a file from your device's gallery or file system. Choose the image and confirm.
+3. Save the updated image.
+
 ### Meez en Place
 
 1. Navigate to the Meez en Place section.
@@ -87,6 +95,9 @@ To get started with Meez, follow these steps:
 
 3. **User will be able to scale a recipe for larger prep demands**:
    - As a user, I want to be able to scale recipes up or down to accommodate different serving sizes or prep demands, ensuring accurate ingredient quantities.
+
+   **User will be able to capture images for recipes**:
+   - As a user, I want to be able to capture images with my phone or webcam and upload to recipe card. Optionally I can choose to upload files from my device or desktop.
 
 4. **User will be able to input Meez en Place items to be able to reference before service to ensure they have everything for service**:
    - As a user, I want to be able to input and organize Meez en Place items so that I can quickly reference them before service and ensure I have all necessary items prepared.
