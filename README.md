@@ -36,7 +36,7 @@ To get started with Meez, follow these steps:
     ```bash
     rails db:create
     rails db:migrate
-    rails db:seed
+    rails sample_data
     ```
 
 5. **Start the Server**:
