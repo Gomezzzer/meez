@@ -16,6 +16,10 @@
    
     <%= render 'home/testimonials' %>
 
+   <h2>Sample Efficiency Chart</h2>
+   <div class="chart-container">
+    <%= line_chart @chart_data, colors: ["#b00", "#666", "#f00", "#0ff" ], width: "300px", height: "300px"  %>
+   </div>
 
     <%= render 'shared/svg_wave' %>
 

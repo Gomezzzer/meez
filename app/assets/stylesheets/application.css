@@ -262,6 +262,22 @@ html {
   border-radius: 5px;
 }
 
+/* chartkick */
+/*.chart-container {
+  background-color: #333;
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 10px;
+  color: #FFF; 
+}
+*/
+/* Additional styles for the chart */
+.chart-container .chart {
+  width: 100%;  /* Make chart width responsive */
+  height: 400px;  /* Fixed height for the chart */
+}
+
+
 /* Ensure the button has no outline when focused */
 .get-started-button:focus {
   outline: none;
