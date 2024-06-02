@@ -21,7 +21,7 @@ task({ :sample_data => :environment }) do
     )
 
     # Create sample recipe modifiers for George
-    5.times do
+    10.times do
       recipe_modifier = RecipeModifier.create!(
         name: Faker::Food.dish,
         description: Faker::Food.description,
