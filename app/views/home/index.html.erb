@@ -14,7 +14,9 @@
         <%= image_tag("Chef-amico.png", width: '350 px', class: 'img-fluid') %>
     </div>
    
-    <%= render 'home/testimonials' %>
+    <section id="testimonials-section">
+     <%= render 'home/testimonials' %>
+    </section>
 
     <h2 class="my-4" style="color: #F3DEFF;">Efficiency Chart</h2>
     <%= render partial: 'home/chart_partial', locals: { chart_data: @chart_data } %>
