@@ -13,21 +13,34 @@
     <div class="image-container">
         <%= image_tag("Chef-amico.png", width: '350 px', class: 'img-fluid') %>
     </div>
-   
+
     <section id="testimonials-section">
-     <%= render 'home/testimonials' %>
+        <%= render 'home/testimonials' %>
     </section>
+
+    <div class="features">
+        <h2 class="my-4" style="color: #F3DEFF;">Features</h2>
+        <ul>
+            <li><strong>Recipes:</strong> Access a wide variety of recipes for all your culinary needs.</li>
+            <li><strong>Meez:</strong> Utilize a digital mise en place to organize your ingredients and prep work efficiently.</li>
+            <li><strong>Recipe Scaler:</strong> Adjust recipe quantities effortlessly to suit any serving size.</li>
+        </ul>
+    </div>
+
 
     <h2 class="my-4" style="color: #F3DEFF;">Efficiency Chart</h2>
     <%= render partial: 'home/chart_partial', locals: { chart_data: @chart_data } %>
 
+    <h2 class="my-4" style="color: #F3DEFF;">Watch Our Latest Video</h2>
+    <div class="video-container">
+     <iframe src="https://www.loom.com/embed/7af4a1d898dd4858b856b879410dd840" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
 
 
     <%= render 'shared/svg_wave' %>
-
-     
-
 </body>
+
 
 
 
