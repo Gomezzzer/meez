@@ -90,6 +90,8 @@ To get started with Meez, follow these steps:
 Efficient Recipe Management for Line Chefs:
 Line chefs often face the challenge of managing numerous recipes, accurately scaling them for different service volumes, and keeping track of all the ingredients—referred to as "meez" (mise en place). The lack of an organized system can lead to errors in ingredient preparation, inefficient workflow, and inconsistencies in dish quality.
 
+## Solution
+
 Our app solves this by providing a streamlined platform where line chefs can easily access and scale recipes, manage their meez, and ensure every dish is prepared with precision. This not only enhances kitchen efficiency but also maintains the high standards expected in a professional culinary environment.
 
 ## User Stories
