@@ -15,6 +15,10 @@ gem 'chartkick'
 
 gem 'groupdate'
 
+gem 'pagy'
+
+gem 'carrierwave', '~> 3.0'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 
@@ -89,7 +93,6 @@ end
 # ===========
 gem "appdev_support"
 gem "awesome_print"
-gem "devise"       # to be removed
 gem "dotenv-rails"
 gem "faker"
 gem "htmlbeautifier"
@@ -121,6 +124,3 @@ group :test do
   gem "rspec-html-matchers"
   gem "webmock"
 end
-
-gem 'pagy'
-gem 'carrierwave', '~> 3.0'
