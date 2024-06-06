@@ -101,7 +101,7 @@ Our app solves this by providing a streamlined platform where line chefs can eas
    - As a user, I want to be able to edit existing recipes to update or correct information, and delete recipes that are no longer needed to keep my collection organized.
 
 3. **User will be able to scale a recipe for larger prep demands**:
-   - As a user, I want to be able to scale recipes up or down to accommodate different serving sizes or prep demands, ensuring accurate ingredient quantities.
+   - As a user, I want to be able to scale recipes up to accommodate different serving sizes or prep demands, ensuring accurate ingredient quantities.
 
 4. **User will be able to capture images for recipes**:
    - As a user, I want to be able to capture images with my phone or webcam and upload to recipe card. Optionally I can choose to upload files from my device or desktop.
