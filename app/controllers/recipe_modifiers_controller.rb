@@ -11,7 +11,6 @@ class RecipeModifiersController < ApplicationController
 
   # GET /recipe_modifiers/1 or /recipe_modifiers/1.json
   def show
-    # @recipe_modifier is already set by the before_action
   end
 
   # GET /recipe_modifiers/new
@@ -21,7 +20,6 @@ class RecipeModifiersController < ApplicationController
 
   # GET /recipe_modifiers/1/edit
   def edit
-    # @recipe_modifier is already set by the before_action
   end
 
   # POST /recipe_modifiers or /recipe_modifiers.json
@@ -41,8 +39,6 @@ class RecipeModifiersController < ApplicationController
 
   # PATCH/PUT /recipe_modifiers/1 or /recipe_modifiers/1.json
   def update
-    # @recipe_modifier is already set by the before_action
-
     respond_to do |format|
       if @recipe_modifier.update(recipe_modifier_params)
         format.html { redirect_to recipe_modifier_url(@recipe_modifier), notice: "Recipe modifier was successfully updated." }
@@ -56,7 +52,6 @@ class RecipeModifiersController < ApplicationController
 
   # DELETE /recipe_modifiers/1 or /recipe_modifiers/1.json
   def destroy
-    # @recipe_modifier is already set by the before_action
     @recipe_modifier.destroy
     redirect_to recipe_modifiers_url, notice: "Recipe modifier was successfully destroyed."
   end
@@ -114,9 +109,6 @@ class RecipeModifiersController < ApplicationController
   def calculate_original_yields(recipe_modifiers)
     original_yields = {}
     recipe_modifiers.each do |recipe_modifier|
-      # Implement your logic to calculate original yield based on the provided measurements
-      # For example, you can parse the measurements string to extract the original yield
-      # Let's assume the measurements string contains "Original Yield: X servings"
       measurements = recipe_modifier.measurements
       original_yield_match = measurements.match(/Original Yield: (\d+)/)
       original_yield = original_yield_match[1].to_i if original_yield_match
