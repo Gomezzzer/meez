@@ -21,6 +21,15 @@
     <%= form.text_field :measurement %>
   </div>
 
+  <div class="form-group mt-4">
+   <p class="card-title">Add Image</p>
+    <%= form.file_field :image, class: "form-control-file" %>
+    <div class="form-check">
+      <%= form.check_box :remove_image, class: "form-check-input" %>
+      <%= form.label :remove_image, "Remove Image", class: "form-check-label" %>
+    </div>
+  </div>
+
   <div class="form-group custom-button-row mt-2">
     <%= form.submit "Save", class: "custom-outline-btn" %>
   </div>

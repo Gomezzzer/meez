@@ -67,6 +67,6 @@ class MeezEnPlacesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def meez_en_place_params
-      params.require(:meez_en_place).permit(:ingredient_name, :measurement)
+      params.require(:meez_en_place).permit(:remove_image, :image, :ingredient_name, :measurement)
     end
 end

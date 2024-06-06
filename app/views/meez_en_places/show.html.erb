@@ -2,6 +2,12 @@
 
 <%= render @meez_en_place %>
 
+<div class="col-md-6">
+  <% if @meez_en_place.image.url %>
+    <%= image_tag @meez_en_place.image.url, class: 'card-img-right' %>
+  <% end %>
+</div>
+
 <div class="custom-button-row mt-4">
  <div class="col-auto">
   <%= link_to "Back to meez", meez_en_places_path, class: "btn custom-outline-btn" %>

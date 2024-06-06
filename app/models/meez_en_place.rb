@@ -3,6 +3,7 @@
 # Table name: meez_en_places
 #
 #  id              :integer          not null, primary key
+#  image           :string
 #  ingredient_name :string
 #  measurement     :string
 #  created_at      :datetime         not null
@@ -21,4 +22,6 @@ class MeezEnPlace < ApplicationRecord
   # Validations
   validates :ingredient_name, presence: true
   validates :measurement, presence: true
+
+  mount_uploader :image, ImageUploader
 end

@@ -5,6 +5,12 @@
     <div class="card-header">
      <%= render "form", meez_en_place: @meez_en_place %>
 
+     <% if @meez_en_place.image.url %>
+        <div class="mt-3 text-center">
+          <%= image_tag @meez_en_place.image.url, class: 'card-img-right img-fluid' %>
+        </div>
+      <% end %>
+
   <br>
 
   <div>
