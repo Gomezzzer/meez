@@ -85,6 +85,13 @@ To get started with Meez, follow these steps:
 2. Add items to your station.
 3. Organize and manage your items as needed.
 
+## Pain Point
+
+Efficient Recipe Management for Line Chefs:
+Line chefs often face the challenge of managing numerous recipes, accurately scaling them for different service volumes, and keeping track of all the ingredients—referred to as "meez" (mise en place). The lack of an organized system can lead to errors in ingredient preparation, inefficient workflow, and inconsistencies in dish quality.
+
+Our app solves this by providing a streamlined platform where line chefs can easily access and scale recipes, manage their meez, and ensure every dish is prepared with precision. This not only enhances kitchen efficiency but also maintains the high standards expected in a professional culinary environment.
+
 ## User Stories
 
 1. **User will be able to create a recipe**:
@@ -141,13 +148,6 @@ We welcome contributions to Meez! To contribute, follow these steps:
 7. **Open a Pull Request**:
     Go to the original repository and click "New Pull Request".
 
-## License
-
-Meez is released under the [MIT License](LICENSE).
-
-## Contact
-
-If you have any questions or need further assistance, feel free to contact us at support@meezapp.com.
 
 ## FAQ
 
