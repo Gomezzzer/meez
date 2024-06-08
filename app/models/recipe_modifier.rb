@@ -18,7 +18,7 @@ class RecipeModifier < ApplicationRecord
    belongs_to :user
  
    # Constants
-   ALLERGIES = %w(peanut dairy gluten lobster vegan vegetarian) # Add all valid allergies here
+   ALLERGIES = %w(peanut dairy gluten lobster vegan vegetarian fish sesame egg) # Add all valid allergies here
  
    # Validations
    validates :user, presence: true
