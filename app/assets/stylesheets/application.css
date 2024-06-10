@@ -13,8 +13,9 @@ body{
   font-size: 1.3rem;
   transition: all 0.3s ease-in-out;
 }
-/*a:link,a:active,a:visited,a:hover{
+/*a.nav-link{
 	color:#3f51b5;
+  font-size: 2rem;
 }
 */
 .outerdiv
@@ -221,6 +222,8 @@ html {
   font-size: 100px;
   margin-top: 2rem;
   font-family: 'Oswald', sans-serif !important;
+  font-weight: 200;
+  margin-left: 1rem;
 }
 .header {
   text-align: center;
@@ -235,17 +238,28 @@ html {
 .header h2 {
   margin: 0; 
   font-size: 24px; 
+  color: #5000ca; 
 }
 .get-started-button {
-  padding: 10px 20px;
-  font-size: 18px;
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #5000ca; /* Blueviolet border */
+  color: #5000ca; /* Blueviolet text color */
+  padding: 10px 20px; /* Smaller padding for smaller buttons */
+  text-align: center;
   text-decoration: none;
-  background-color: #5000ca;
-  color: white;
-  border: none;
-  outline: none;
-  border-radius: 5px;
+  display: inline-block;
+  font-size: 18px;/* Smaller font size */
+  cursor: pointer;
+  border-radius: 5px;/* Adjust the border radius as needed */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin-right: 1rem;
 }
+
+.get-started-button:hover {
+  background-color: #5000ca; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
 .section-title {
   font-size: 2rem;
   color: #F3DEFF;
@@ -256,6 +270,7 @@ html {
 .get-started-button:focus {
   outline: none;
 }
+
 .svg-wave {
   position: relative;
   width: 100%;
@@ -269,6 +284,7 @@ html {
 .features li {
   color: #F3DEFF;
 }
+
 /* chart */
 .chart-container {
   border-radius: 15px;
@@ -614,10 +630,11 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 576px) {
   .get-started-button {
       padding: 8px 16px; 
-      font-size: 13px;   
+      font-size: 10px;  
+      margin-right: 1rem; 
   }
   .image-container img {
-    max-width: 90%; 
+    max-width: 100%; 
   }
   .section-title {
     font-size: 2rem;
