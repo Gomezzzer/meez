@@ -41,7 +41,7 @@ To get started with Meez, follow these steps:
 
 5. **Start the Server**:
     ```bash
-    rails server
+    bin/dev
     ```
 
 6. **Visit the App**:
