@@ -58,6 +58,8 @@ class RecipeModifiersController < ApplicationController
 
   # GET /recipe_modifiers/desired_yield_page
   def desired_yield_page
+    # this would be good in the model
+    # could maybe be refactored to reuse the same show page with different parameters
     # Retrieve the scaling factor from the request parameters
     @scaling_factor = params[:scaleFactor].to_f
 
@@ -116,4 +118,5 @@ class RecipeModifiersController < ApplicationController
     end
     original_yields
   end
+  # Too much logic in the controller ; move these to model or service object
 end

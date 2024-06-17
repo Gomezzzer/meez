@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar""> 
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-  <%= image_tag 'dish.png', alt: 'Meez App', width: 50, height: 50 %>
-<% end %>
+      <%= image_tag 'dish.png', alt: 'Meez App', width: 50, height: 50 %><!-- indent is off -->
+    <% end %> <!-- indent is off -->
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,31 +11,31 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
         <% if user_signed_in? %> 
-            <li class="nav-item">
-              <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-            </li>
+          <li class="nav-item">
+            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
 
-            <li class="nav-item">
-              <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
-            </li>
+          <li class="nav-item">
+            <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
+          </li>
 
-            <li class="nav-item">
-              <%= link_to "Recipes", recipe_modifiers_path, class: "nav-link" %>
-            </li>
+          <li class="nav-item">
+            <%= link_to "Recipes", recipe_modifiers_path, class: "nav-link" %>
+          </li>
 
-            <!-- Add MeezEnPlace link -->
-            <li class="nav-item">
-              <%= link_to "Meez En Place", meez_en_places_path, class: "nav-link" %>
-            </li>
+          <!-- Add MeezEnPlace link -->
+          <li class="nav-item">
+            <%= link_to "Meez En Place", meez_en_places_path, class: "nav-link" %>
+          </li>
 
         <% else %>
-            <li class="nav-item">
-              <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
-            </li>
+          <li class="nav-item">
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+          </li>
 
-            <li class="nav-item">
-              <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
-            </li>
+          <li class="nav-item">
+            <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
+          </li>
         <% end %>  
 
         <li class="nav-item dropdown">
@@ -51,11 +51,11 @@
         
       </ul>
       <%= search_form_for @q, url: recipe_modifiers_path, method: :get, class: 'd-flex' do |f| %>
-          <div class="form-group">
-            <%= f.text_field :name_cont, class: 'form-control me-2', placeholder: 'Search by name' %>
-          </div>
-          <%= f.submit 'Search', class: 'btn btn-outline-dark' %>
-        <% end %>
+        <div class="form-group">
+          <%= f.text_field :name_cont, class: 'form-control me-2', placeholder: 'Search by name' %>
+        </div>
+        <%= f.submit 'Search', class: 'btn btn-outline-dark' %>
+      <% end %>
     </div>
   </div>
 </nav>

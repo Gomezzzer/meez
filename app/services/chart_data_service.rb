@@ -6,4 +6,5 @@ class ChartDataService
       {name: "R5", data: {"2023-05-01" => 55, "2023-05-02" => 45, "2023-05-03" => 70, "2023-05-04" => 30, "2023-05-05" => 45}}
     ]
   end
+  # not clear what this is for or where the data is coming from
 end

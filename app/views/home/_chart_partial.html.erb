@@ -1,48 +1,49 @@
 <!-- app/views/shared/_chart_partial.html.erb -->
 <div class="chart-container">
   <%= column_chart @chart_data, 
-        colors: ["#007bff", "#cec5c5", "#733FC8"], 
-       
-        library: {
-          chart: {
-            backgroundColor: '#2b2b2b',  # Dark background
-            style: {
-              fontFamily: 'Arial, sans-serif'
-            }
-          },
-          title: {
-            style: {
-              color: '#ffffff'  # White text for the title
-            }
-          },
-          xAxis: {
-            labels: {
-              style: {
-                color: '#ffffff'  # White text for x-axis labels
-              }
-            },
-            title: {
-              style: {
-                color: '#ffffff'  # White text for x-axis title
-              }
-            }
-          },
-          yAxis: {
-            labels: {
-              style: {
-                color: '#ffffff'  # White text for y-axis labels
-              }
-            },
-            title: {
-              style: {
-                color: '#ffffff'  # White text for y-axis title
-              }
-            }
-          },
-          legend: {
-            itemStyle: {
-              color: '#ffffff'  # White text for legend
-            }
+    colors: ["#007bff", "#cec5c5", "#733FC8"], 
+    
+    library: {
+      chart: {
+        backgroundColor: '#2b2b2b',  # Dark background
+        style: {
+          fontFamily: 'Arial, sans-serif'
+        }
+      },
+      title: {
+        style: {
+          color: '#ffffff'  # White text for the title
+        }
+      },
+      xAxis: {
+        labels: {
+          style: {
+            color: '#ffffff'  # White text for x-axis labels
           }
-        } %>
+        },
+        title: {
+          style: {
+            color: '#ffffff'  # White text for x-axis title
+          }
+        }
+      },
+      yAxis: {
+        labels: {
+          style: {
+            color: '#ffffff'  # White text for y-axis labels
+          }
+        },
+        title: {
+          style: {
+            color: '#ffffff'  # White text for y-axis title
+          }
+        }
+      },
+      legend: {
+        itemStyle: {
+          color: '#ffffff'  # White text for legend
+        }
+      }
+    } %>
+    <%#indent was off%>
 </div>
