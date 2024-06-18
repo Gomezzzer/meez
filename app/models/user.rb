@@ -24,6 +24,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         has_many :recipe_modifiers
-         has_many :meez_en_places, dependent: :destroy
+  has_many :recipe_modifiers
+  has_many :meez_en_places, dependent: :destroy
+  # indent was off
 end

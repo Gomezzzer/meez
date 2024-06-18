@@ -1,30 +1,30 @@
 <body id="home">
     <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
         <!-- Headings -->
-        <div class="header">
-            <h1>Meez</h1>
-            <h2>Built for line chefs</h2>
-        </div>
+      <div class="header">
+          <h1>Meez</h1>
+          <h2>Built for line chefs</h2>
+      </div>
 
-        <!-- Get Started Button -->
-        <%= link_to "Get Started", new_user_registration_path, class: "btn get-started-button" %>
+      <!-- Get Started Button --> <!-- comment not needed -->
+      <%= link_to "Get Started", new_user_registration_path, class: "btn get-started-button" %>
     </div>
   
     <div class="image-container">
-        <%= image_tag("Chef-amico.png", width: '350 px', class: 'img-fluid') %>
+      <%= image_tag("Chef-amico.png", width: '350 px', class: 'img-fluid') %>
     </div>
 
     <section id="testimonials-section">
-        <%= render 'home/testimonials' %>
+      <%= render 'home/testimonials' %>
     </section>
 
     <div class="features">
-        <h2 class="my-4" style="color: #F3DEFF;">Features</h2>
-        <ul>
-            <li><strong>Recipes:</strong> Access your recipes for your culinary needs.</li>
-            <li><strong>Meez:</strong> Utilize a digital mise en place to organize your ingredients and prep work efficiently.</li>
-            <li><strong>Recipe Scaler:</strong> Adjust recipe quantities effortlessly to suit any serving size.</li>
-        </ul>
+      <h2 class="my-4" style="color: #F3DEFF;">Features</h2>
+      <ul>
+          <li><strong>Recipes:</strong> Access your recipes for your culinary needs.</li>
+          <li><strong>Meez:</strong> Utilize a digital mise en place to organize your ingredients and prep work efficiently.</li>
+          <li><strong>Recipe Scaler:</strong> Adjust recipe quantities effortlessly to suit any serving size.</li>
+      </ul>
     </div>
 
 
