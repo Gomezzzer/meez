@@ -6,30 +6,29 @@
             <h2>Built for line chefs</h2>
         </div>
 
-        <!-- Get Started Button -->
-        <%= link_to "Get Started", new_user_registration_path, class: "btn get-started-button" %>
+      <%= link_to "Get Started", new_user_registration_path, class: "btn get-started-button" %>
     </div>
   
     <div class="image-container">
-        <%= image_tag("Chef-amico.png", width: '350 px', class: 'img-fluid') %>
+      <%= image_tag("Chef-amico.png", width: '350 px', class: 'img-fluid') %>
     </div>
 
     <section id="testimonials-section">
-        <%= render 'home/testimonials' %>
+      <%= render 'home/testimonials' %>
     </section>
 
     <div class="features">
         <h2 class="my-4" style="color: #F3DEFF;">Features</h2>
         <ul>
-            <li><strong>Recipes:</strong> Access your recipes for your culinary needs.</li>
-            <li><strong>Meez:</strong> Utilize a digital mise en place to organize your ingredients and prep work efficiently.</li>
-            <li><strong>Recipe Scaler:</strong> Adjust recipe quantities effortlessly to suit any serving size.</li>
+         <li><strong>Recipes:</strong> Access your recipes for your culinary needs.</li>
+         <li><strong>Meez:</strong> Utilize a digital mise en place to organize your ingredients and prep work efficiently.</li>
+         <li><strong>Recipe Scaler:</strong> Adjust recipe quantities effortlessly to suit any serving size.</li>
         </ul>
     </div>
 
 
     <h2 class="my-4" style="color: #F3DEFF;">Efficiency Chart</h2>
-    <%= render partial: 'home/chart_partial', locals: { chart_data: @chart_data } %>
+      <%= render partial: 'home/chart_partial', locals: { chart_data: @chart_data } %>
 
     <h2 class="my-4" style="color: #F3DEFF;">Watch Our Latest Video</h2>
     <div class="video-container">
@@ -38,7 +37,7 @@
 
 
 
-    <%= render 'shared/svg_wave' %>
+      <%= render 'shared/svg_wave' %>
 </body>
 
 

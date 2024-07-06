@@ -2,7 +2,6 @@
 <div class="chart-container">
   <%= column_chart @chart_data, 
         colors: ["#007bff", "#cec5c5", "#733FC8"], 
-       
         library: {
           chart: {
             backgroundColor: '#2b2b2b',  # Dark background
@@ -11,38 +10,41 @@
             }
           },
           title: {
+            text: 'Amount of Users per Month',  # Title text
             style: {
-              color: '#ffffff'  # White text for the title
+              color: '#a9a9a9',  # Dark grey text for the title
+              fontSize: '16px'  # Font size for the title
             }
           },
           xAxis: {
             labels: {
               style: {
-                color: '#ffffff'  # White text for x-axis labels
+                color: '#a9a9a9'  # Dark grey text for x-axis labels
               }
             },
             title: {
               style: {
-                color: '#ffffff'  # White text for x-axis title
+                color: '#a9a9a9'  # Dark grey text for x-axis title
               }
             }
           },
           yAxis: {
             labels: {
               style: {
-                color: '#ffffff'  # White text for y-axis labels
+                color: '#a9a9a9'  # Dark grey text for y-axis labels
               }
             },
             title: {
               style: {
-                color: '#ffffff'  # White text for y-axis title
+                color: '#a9a9a9'  # Dark grey text for y-axis title
               }
             }
           },
           legend: {
             itemStyle: {
-              color: '#ffffff'  # White text for legend
+              color: '#a9a9a9'  # Dark grey text for legend
             }
           }
         } %>
 </div>
+

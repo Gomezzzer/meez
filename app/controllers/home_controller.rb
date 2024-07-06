@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
     def index
-        @chart_data = ChartDataService.chart_data
+      @chart_data = ChartDataService.chart_data
     end
-    
-
+  
     def about
-        @about = "Meez" 
+      @about = "Meez"
     end
-end
+  end
+  
